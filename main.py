@@ -1,27 +1,23 @@
-import age
-import self
-
-
 class Character:
-   def __init__(self, name: str, coordinates: tuple):
-      self.name = name
-      self.x = coordinates[0]
-      self.y = coordinates[1]
+    def __init__(self, name: str, coordinates: tuple):
+        self.name = name
+        self.x = coordinates[0]
+        self.y = coordinates[1]
 
-   def get_name(self) -> str:
-      return self.name
+    def get_name(self) -> str:
+        return self.name
 
-   def get_coordinates(self) -> tuple:
-      return self.x, self.y
+    def get_coordinates(self) -> tuple:
+        return self.x, self.y
 
 
 class JohnCharacter(Character):
-   def __init__(self, name: str, coordinates: tuple, skill: str):
-      super().__init__(name, coordinates)
-      self.skill = skill
+    def __init__(self, name: str, coordinates: tuple, skill: str):
+        super().__init__(name, coordinates)
+        self.skill = skill
 
-   def get_skill(self) -> str:
-      return self.skill
+    def get_skill(self) -> str:
+        return self.skill
 
 
 character = Character("Daniil", (120, 400))
@@ -43,16 +39,16 @@ print(john_character.get_skill())
 
 class Robot:
 
-   def __init__ (self, name, age):
-      self.name = name
+    def __init__(self, name, age):
+        self.power = None
+        self.name = name
 
+        self.age = float(age)
 
-      self.age = float(age)
+    def get_name(self, dexterity, mind):
+        self.dexterity = dexterity
+        self.mind = mind
 
-
-   def get_name(self):
-      return self.name
-
-
-   def get_age(self):
-      return self.age
+    def get_age(self, speed, dumb):
+        self.speed = speed
+        self.dumb = dumb
