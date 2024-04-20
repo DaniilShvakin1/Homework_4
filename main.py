@@ -39,16 +39,19 @@ print(john_character.get_skill())
 
 class Robot:
 
-    def __init__(self, name, age):
+    def __init__(self, name: str, age: int):
         self.power = None
         self.name = name
 
-        self.age = float(age)
 
-    def get_name(self, dexterity, mind):
+
+    def get_name(self, dexterity: str, mind: int):
         self.dexterity = dexterity
         self.mind = mind
 
     def get_age(self, speed, dumb):
         self.speed = speed
         self.dumb = dumb
+
+
+
